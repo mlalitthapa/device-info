@@ -5,7 +5,7 @@
         <Search />
       </div>
     </div>
-    <Latest />
+    <Latest :devices="devices" />
   </div>
 </template>
 
@@ -14,6 +14,10 @@ import Search from '@/components/Search'
 import Latest from '@/components/device/Latest'
 
 export default {
-  components: { Latest, Search }
+  components: { Latest, Search },
+  async asyncData({ $axios }) {
+    const { data } = await $axios.$get('latest')
+    return { devices: data }
+  }
 }
 </script>

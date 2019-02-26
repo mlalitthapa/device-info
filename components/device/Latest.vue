@@ -1,17 +1,34 @@
 <template>
-  <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
-    <h3 class="uk-card-title">
-      Device Name
-    </h3>
-    <p>
-      Device Summary
-    </p>
+  <div>
+    <h2 class="uk-heading-divider">
+      Latest Devices
+    </h2>
+    <div class="uk-child-width-auto uk-text-center" uk-grid>
+      <div v-bind:key="device.slug" v-for="device in devices">
+        <div class="uk-card uk-card-default">
+          <div class="uk-card-media-top">
+            <img :src="device.image.src" :alt="device.image.alt">
+          </div>
+          <div class="uk-card-body">
+            <h3 class="uk-card-title">
+              {{ device.name }}
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Latest'
+  name: 'Latest',
+  props: {
+    devices: {
+      required: true,
+      type: Array
+    }
+  }
 }
 </script>
 
