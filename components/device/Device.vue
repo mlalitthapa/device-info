@@ -9,6 +9,7 @@
 
 <script>
 import Specs from '@/components/device/Specs'
+
 export default {
   name: 'Device',
   components: { Specs },

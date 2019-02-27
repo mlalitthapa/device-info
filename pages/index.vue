@@ -5,16 +5,21 @@
         <Search />
       </div>
     </div>
-    <Latest :devices="devices" />
+    <div>
+      <h2 class="uk-heading-divider">
+        Latest Devices
+      </h2>
+      <DeviceList :devices="devices" />
+    </div>
   </div>
 </template>
 
 <script>
 import Search from '@/components/Search'
-import Latest from '@/components/device/Latest'
+import DeviceList from '@/components/device/DeviceList'
 
 export default {
-  components: { Latest, Search },
+  components: { DeviceList, Search },
   async asyncData({ $axios }) {
     const { data } = await $axios.$get('latest')
     return { devices: data }

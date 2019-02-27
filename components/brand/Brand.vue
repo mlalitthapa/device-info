@@ -1,12 +1,14 @@
 <template>
   <div>
     <div class="uk-card uk-card-secondary uk-card-body">
-      <h3 class="uk-card-title uk-text-uppercase">
-        {{ brand.name }}
-      </h3>
-      <p>
-        {{ brand.devices }}
-      </p>
+      <nuxt-link :to="`/brand/${brand.slug}`" class="uk-link-heading">
+        <h3 class="uk-card-title uk-text-uppercase">
+          {{ brand.name }}
+        </h3>
+        <p>
+          {{ brand.devices }}
+        </p>
+      </nuxt-link>
     </div>
   </div>
 </template>
