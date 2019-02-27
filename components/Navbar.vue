@@ -3,10 +3,14 @@
     <div class="uk-navbar-left">
       <ul class="uk-navbar-nav">
         <li>
-          <a href="#">Latest</a>
+          <nuxt-link to="/">
+            Home
+          </nuxt-link>
         </li>
         <li>
-          <a href="#">Brands</a>
+          <nuxt-link to="/brand">
+            Brands
+          </nuxt-link>
         </li>
       </ul>
     </div>
