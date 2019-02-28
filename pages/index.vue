@@ -1,10 +1,6 @@
 <template>
-  <div>
-    <div class="uk-flex uk-flex-center">
-      <div class="uk-width-2-3 uk-margin-medium-top">
-        <Search />
-      </div>
-    </div>
+  <div class="uk-margin-medium-top">
+    <Search />
     <div>
       <h2 class="uk-heading-divider">
         Latest Devices
