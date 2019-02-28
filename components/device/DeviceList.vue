@@ -1,6 +1,6 @@
 <template>
   <div class="uk-child-width-auto uk-text-center uk-flex uk-flex-center" uk-grid>
-    <div :key="device.slug" v-for="device in devices">
+    <div v-for="device in devices" :key="device.slug">
       <ListItem :device="device" />
     </div>
   </div>

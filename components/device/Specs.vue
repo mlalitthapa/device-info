@@ -1,20 +1,20 @@
 <template>
   <div>
     <table
+      v-for="title in titles"
       :key="`spec-${title}`"
       class="uk-table uk-table-responsive uk-table-small uk-table-divider"
-      v-for="title in titles"
     >
       <caption class="uk-text-uppercase uk-text-bold uk-text-primary">
         {{ title }}
       </caption>
       <tbody>
         <tr
-          v-for="item in specs[title]"
-          :item="item"
-          :key="`spec-item-${item.name}`"
           is="spec"
-        ></tr>
+          v-for="item in specs[title]"
+          :key="`spec-item-${item.name}`"
+          :item="item"
+        />
       </tbody>
     </table>
   </div>
