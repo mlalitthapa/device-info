@@ -19,7 +19,8 @@
     "node-sass": "^4.11.0",
     "nuxt": "^2.4.0",
     "sass-loader": "^7.1.0",
-    "uikit": "^3.0.3"
+    "uikit": "^3.0.3",
+    "vuejs-paginate": "^2.1.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
