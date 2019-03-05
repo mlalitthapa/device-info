@@ -1,5 +1,5 @@
 {
-  "name": "device-info",
+  "name": "Devices",
   "version": "1.0.0",
   "description": "Get the specs info of mobile devices scrapped from GSM Arena",
   "author": "Lalit Thapa",
