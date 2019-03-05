@@ -11,8 +11,8 @@
       <tbody>
         <tr
           is="spec"
-          v-for="item in specs[title]"
-          :key="`spec-item-${item.name}`"
+          v-for="(item, index) in specs[title]"
+          :key="`spec-item-${index}-${item.name}`"
           :item="item"
         />
       </tbody>
