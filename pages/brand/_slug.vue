@@ -4,13 +4,20 @@
       {{ brand.name }}
     </h2>
     <DeviceList :devices="brand.devices" />
+    <div class="uk-margin-medium-top">
+      <no-ssr>
+        <Paginate v-if="brand.pages" :pages="brand.pages" />
+      </no-ssr>
+    </div>
   </div>
 </template>
 
 <script>
 import DeviceList from '@/components/device/DeviceList'
+import Paginate from '@/components/device/Paginate'
+
 export default {
-  components: { DeviceList },
+  components: { Paginate, DeviceList },
   async asyncData({ $axios, params }) {
     const { data: brand } = await $axios.$get(`brand/${params.slug}`)
     return { brand }

@@ -29,7 +29,10 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [{ src: '~/plugins/uikit.js', ssr: false }],
+  plugins: [
+    { src: '~/plugins/uikit.js', ssr: false },
+    { src: '~/plugins/vue-paginate', ssr: false }
+  ],
 
   /*
   ** Nuxt.js modules
