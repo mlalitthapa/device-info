@@ -1,7 +1,13 @@
 const pkg = require('./package')
+require('dotenv').config()
 
 module.exports = {
   mode: 'universal',
+
+  // Environment variables
+  env: {
+    API_URL: process.env.API_URL
+  },
 
   /*
   ** Headers of the page
@@ -46,7 +52,6 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    baseURL: 'http://54.172.239.151:3000/api/v1'
   },
 
   /*
