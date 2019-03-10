@@ -1,6 +1,13 @@
-# device-info
+# Devices
 
-> Get the specs info of mobile devices scrapped from GSM Arena
+> Get the specs info of mobile devices scrapped from GSM Arena.
+
+### Demo
+You can checkout a simple demo [here](https://scrapper.lalitthapa.com.np).
+This demo is built using [Nuxt.js docs](https://nuxtjs.org) for server side
+rendering and [UIKit](https://getuikit.com) for frontend UI. For actual data
+scrapping from **GSM Arena** [this](https://github.com/mlalitthapa/phone-scrapper)
+project is used, built using Golang.
 
 ## Build Setup
 
